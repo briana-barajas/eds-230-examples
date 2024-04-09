@@ -13,9 +13,9 @@
 #' @author Naomi
 #' @return annual (power for each year), avg (average power) (see eunits for units)
 
-solarpv = function(area, eff=0.8, PR=0.75, solar, clr="blue", eunits="J", etype="both",g=TRUE, ethresh=10000) {
-
-  
+solarpv = function(area, eff=0.8, PR=0.75, 
+                   solar, clr="dodgerblue", eunits="J", 
+                   etype="both",g=TRUE, ethresh=10000) {
   
   
   # find energy to use depending on use options
@@ -61,3 +61,4 @@ solarpv = function(area, eff=0.8, PR=0.75, solar, clr="blue", eunits="J", etype=
   return(list(annual=annualsolar[,c("year","elect")], mean=mean(annualsolar$elect)))
 
 }
+
